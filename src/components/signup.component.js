@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import Nav from './Nav';
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -35,6 +35,8 @@ const SignUp = () => {
   };
 
   return (
+    <div>
+      <Nav/>
     <form onSubmit={handleSubmit}>
       <h3>Sign Up</h3>
 
@@ -83,6 +85,7 @@ const SignUp = () => {
         Already registered <a href="/sign-in">sign in?</a>
       </p>
     </form>
+    </div>
   );
 };
 
