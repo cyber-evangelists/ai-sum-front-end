@@ -1,5 +1,16 @@
-# ReactLoginSignupUITemplate
+# Description
 
-Build React Login & Sign Up UI Template with Bootstrap 5 - Create React authentication system such as login and sign up template using Bootstrap.
+    Simple react frontend containing login, signup and landing page, which we have used for a pdf summarization project.
 
-[Build React Login & Sign Up UI Template with Bootstrap 5](https://www.positronx.io/build-react-login-sign-up-ui-template-with-bootstrap-4/)
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm install
+  npm start
+
+```
+
+
+

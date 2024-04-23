@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import Nav from './Nav';
 const Login = () => {
 
   const [email, setEmail] = useState('');
@@ -26,7 +26,9 @@ const Login = () => {
           'Content-Type': 'application/json'
         }
       });
+      
       console.log(response.data);
+      localStorage.setItem('accessToken', response.data.access_token);
       navigate("/home")
     } catch (error) {
       console.error('Error occurred:', error);
@@ -34,7 +36,10 @@ const Login = () => {
   };
 
   return (
+    <div>
+      <Nav/>
     <form onSubmit={handleSubmit}>
+    
       <h3>Sign In</h3>
 
       <div className="mb-3">
@@ -67,6 +72,7 @@ const Login = () => {
         </button>
       </div>
     </form>
+    </div>
   );
 };
 
